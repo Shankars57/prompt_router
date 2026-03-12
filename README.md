@@ -17,31 +17,30 @@ A Node.js + Express service with a web interface that uses a two-step Gemini wor
 
 ```text
 ai-prompt-router/
-│
-├── server.js
-├── routes/
-│   └── chatRoutes.js
-├── services/
-│   ├── classifier.js
-│   ├── router.js
-│   └── geminiClient.js
-├── prompts/
-│   └── prompts.js
-├── utils/
-│   └── logger.js
-├── config/
-│   └── config.js
-├── public/
-│   ├── index.html
-│   ├── style.css
-│   └── script.js
-├── logs/
-│   └── route_log.jsonl
-├── tests/
-│   └── testInputs.js
-├── .env
-├── package.json
-└── README.md
+|-- server.js
+|-- routes/
+|   `-- chatRoutes.js
+|-- services/
+|   |-- classifier.js
+|   |-- router.js
+|   `-- geminiClient.js
+|-- prompts/
+|   `-- prompts.js
+|-- utils/
+|   `-- logger.js
+|-- config/
+|   `-- config.js
+|-- public/
+|   |-- index.html
+|   |-- style.css
+|   `-- script.js
+|-- logs/
+|   `-- route_log.jsonl
+|-- tests/
+|   `-- testInputs.js
+|-- .env
+|-- package.json
+`-- README.md
 ```
 
 ## Setup
