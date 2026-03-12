@@ -1,0 +1,154 @@
+:root {
+  --bg: #f5f7fb;
+  --panel: #ffffff;
+  --border: #d9e1ec;
+  --text: #1f2937;
+  --muted: #5b6472;
+  --accent: #1f6feb;
+  --accent-hover: #1557ba;
+  --user-bubble: #dbeafe;
+  --ai-bubble: #ecfdf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at 20% 0%, #e8f0ff 0%, var(--bg) 35%);
+  color: var(--text);
+}
+
+.app {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 16px;
+  display: grid;
+  gap: 12px;
+}
+
+.app-header {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.app-header p {
+  margin: 6px 0 0;
+  color: var(--muted);
+}
+
+.status-card {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.chat-window {
+  min-height: 460px;
+  max-height: 62vh;
+  overflow-y: auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bubble {
+  max-width: 80%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  line-height: 1.45;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border: 1px solid transparent;
+}
+
+.bubble.user {
+  align-self: flex-end;
+  background: var(--user-bubble);
+  border-color: #c8dcff;
+}
+
+.bubble.ai {
+  align-self: flex-start;
+  background: var(--ai-bubble);
+  border-color: #c9f3df;
+}
+
+.chat-form {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+}
+
+.chat-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.chat-form input:focus {
+  outline: 2px solid rgba(31, 111, 235, 0.2);
+  border-color: var(--accent);
+}
+
+.chat-form button {
+  min-width: 96px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chat-form button:hover {
+  background: var(--accent-hover);
+}
+
+.chat-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 720px) {
+  .app {
+    margin: 0;
+    min-height: 100vh;
+    padding: 10px;
+  }
+
+  .chat-window {
+    min-height: 58vh;
+    max-height: 58vh;
+  }
+
+  .status-card {
+    flex-direction: column;
+  }
+
+  .bubble {
+    max-width: 92%;
+  }
+}

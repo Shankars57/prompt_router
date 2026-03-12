@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Prompt Router</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app-header">
+        <h1>AI Prompt Router</h1>
+        <p>Classify intent, route to expert, generate response.</p>
+      </header>
+
+      <section class="status-card">
+        <span id="intentLabel">Intent: -</span>
+        <span id="confidenceLabel">Confidence: -</span>
+      </section>
+
+      <section id="chat" class="chat-window" aria-live="polite"></section>
+
+      <form id="chatForm" class="chat-form">
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Type a message... (try @code, @data, @writing, @career)"
+          autocomplete="off"
+          required
+        />
+        <button id="sendButton" type="submit">Send</button>
+      </form>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

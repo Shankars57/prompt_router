@@ -1,0 +1,22 @@
+{
+  "name": "ai-prompt-router",
+  "version": "1.0.0",
+  "description": "Node.js AI prompt router using Gemini with intent classification and expert routing",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test:inputs": "node tests/testInputs.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.14"
+  }
+}
