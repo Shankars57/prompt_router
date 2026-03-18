@@ -2,7 +2,7 @@ import { GoogleGenerativeAI } from "@google/generative-ai";
 import { config } from "../config/config.js";
 
 let client = null;
-const FALLBACK_MODELS = ["gemini-1.5-flash", "gemini-1.5-pro"];
+const FALLBACK_MODELS = ["gemini-2.5-flash", "gemini-3-flash-preview"];
 
 function getClient() {
   if (!config.geminiApiKey) {
